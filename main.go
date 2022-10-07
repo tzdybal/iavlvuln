@@ -238,7 +238,7 @@ func main() {
 	// we do a little forging
 	forgedLeafNode := legitValueOp.Proof.Leaves[0]
 	//forgedLeafNode.Key = append([]byte(nil), []byte(forgedValueOp.GetKey())...)
-	forgedLeafNode.Key = []byte("00000100380200000000010DDA4D")
+	forgedLeafNode.Key = []byte{0, 0, 1, 0, 56, 2, 0, 0, 0, 0, 1, 13, 218, 77}
 	forgedLeafNode.Key[13] = 255
 	forgedLeafNode.ValueHash = forgedValueHash
 	forgedValueOp.Proof.Leaves = append(forgedValueOp.Proof.Leaves, forgedLeafNode)
